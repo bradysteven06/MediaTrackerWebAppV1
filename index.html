@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Media Tracker</title>
     <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header class="container">
-            <h1>Personal Media Tracker</h1>
-            <label class="theme-toggle">
-                <input type="checkbox" id="darkModeToggle" />
-                <span>Dark Mode</span>
-            </label>
-        </header>
+  </head>
+  <body>
+    <header class="container">
+      <h1>Personal Media Tracker</h1>
+      <label class="theme-toggle">
+        <input type="checkbox" id="darkModeToggle" />
+        <span>Dark Mode</span>
+      </label>
+    </header>
 
-        <main class="container">
-            <!-- New Entry button to navigate to entry form -->
-            <div id="new-entry">
-            <a href="entry.html" class="entry-button">+ New Entry</a>
-            </div>
-            
-            <!-- Section for filtering options-->
-            <section id="filter-section" class="filters">
-                <h2>Filter Entries</h2>
-                
-                <div class="filters-grid">
-                    <label for="filterType">Type:</label>
-                    <select id="filterType">
-                        <option value="">All</option>
-                        <option value="movie">Movie</option>
-                        <option value="series">Series</option>
-                    </select>
-                    
-                    <label for="filterSubType">SubType:</label>
-                    <select id="filterSubType">
-                        <option value="">All</option>
-                        <option value="anime">Anime</option>
-                        <option value="live-action">Live Action</option>
-                        <option value="animated">Animated</option>
-                        <option value="documentary">Documentary</option>
-                        <option value="manga">Manga</option>
-                    </select>
-                    
-                    <label for="filterGenre">Genre:</label>
-                    <select id="filterGenre">
-                        <option value="">All</option>
-                        <option value="action">Action</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="comedy">Comedy</option>
-                        <option value="drama">Drama</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="romance">Romance</option>
-                        <option value="sci-fi">Sci-Fi</option>
-                        <option value="horror">Horror</option>
-                        <option value="mystery">Mystery</option>
-                    </select>
-                    
-                    <!-- Sorting control-->
-                    <label for="sortBy">Sort By:</label>
-                    <select id="sortBy">
-                        <option value="">None</option>
-                        <option value="title">Title (A → Z)</option>
-                        <option value="rating">Rating (High → Low)</option>
-                        <option value="status">Status (A → Z)</option>
-                    </select>
-                </div>
-            </section>
+    <main class="container">
+      <!-- New Entry button to navigate to entry form -->
+      <div id="new-entry">
+        <a href="entry.html" class="entry-button">+ New Entry</a>
+      </div>
 
-            <!-- Section where the media list is rendered -->
-            <section id="media-list">
-            <h2>My Media List</h2>
-            <ul id="entriesContainer"></ul>
-            </section>
-        </main>
+      <!-- Section for filtering options-->
+      <section id="filter-section" class="filters">
+        <h2>Filter Entries</h2>
 
-        <script>
-            // Configure the API base URL once for all frontend calls.
-            window.APP_CONFIG = { apiBaseUrl: "https://localhost:7143" };
-        </script>
-        <!-- Link to the JavaScript file -->
-        <script type="module" src="app.js"></script>
-    </body>
+        <div class="filters-grid">
+          <label for="filterType">Type:</label>
+          <select id="filterType">
+            <option value="">All</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+          </select>
+
+          <label for="filterSubType">SubType:</label>
+          <select id="filterSubType">
+            <option value="">All</option>
+            <option value="anime">Anime</option>
+            <option value="live-action">Live Action</option>
+            <option value="animated">Animated</option>
+            <option value="documentary">Documentary</option>
+            <option value="manga">Manga</option>
+          </select>
+
+          <label for="filterGenre">Genre:</label>
+          <select id="filterGenre">
+            <option value="">All</option>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="romance">Romance</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="horror">Horror</option>
+            <option value="mystery">Mystery</option>
+          </select>
+
+          <!-- Sorting control-->
+          <label for="sortBy">Sort By:</label>
+          <select id="sortBy">
+            <option value="">None</option>
+            <option value="title">Title (A → Z)</option>
+            <option value="rating">Rating (High → Low)</option>
+            <option value="status">Status (A → Z)</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Section where the media list is rendered -->
+      <section id="media-list">
+        <h2>My Media List</h2>
+        <ul id="entriesContainer"></ul>
+      </section>
+    </main>
+
+    <script>
+      // Configure the API base URL once for all frontend calls.
+      window.APP_CONFIG = { apiBaseUrl: "https://localhost:7143" };
+    </script>
+    <!-- Link to the JavaScript file -->
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
