@@ -256,7 +256,7 @@ fieldset#genreCheckboxes {
 }
 
 .stayOnPageToggle {
-  display: inline-flex; /* align checkbox + text */
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   margin-right: 0.75rem;
